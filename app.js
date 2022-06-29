@@ -9,6 +9,8 @@ app.use(express.json());
 app.use(express.urlencoded({extended : false}))
 
 
-app.get('/users_data', routerUser_data);
+app.use('/', routerUser_data);
+
+
 
 app.listen(port, () => console.log(`Api working on http://localhost:${port}`)); 
